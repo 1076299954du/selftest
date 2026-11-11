@@ -1,0 +1,2 @@
+ceshi 测试  加油 测试
+/Users/duzerui/PycharmProjects/pythonProject/Practice/practice5.py
