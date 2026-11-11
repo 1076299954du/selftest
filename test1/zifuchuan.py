@@ -14,8 +14,9 @@ print('===', a.capitalize())  # 第一个字母大写，剩下的小写
 print(a.title())  # 将每个单词的第一个大写
 print('------')
 q = 'hello,world python'
+print(type(q))
 lst = q.split(sep=",")
 lst1 = q.split()
 print('+++++', lst)  # 以空格来拆分
-print(lst1)
-print(q.rsplit(sep=',', maxsplit=1))
+print("*****",lst1)
+print(q.rsplit(sep=',', maxsplit=1)) # 以逗号来拆分
