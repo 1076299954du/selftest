@@ -19,4 +19,4 @@ lst = q.split(sep=",")
 lst1 = q.split()
 print('+++++', lst)  # 以空格来拆分
 print("*****",lst1)
-print(q.rsplit(sep=',', maxsplit=1)) # 以逗号来拆分
+print(q.rsplit(sep=',', maxsplit=1)) # 从右边开始分割，最多切一次
