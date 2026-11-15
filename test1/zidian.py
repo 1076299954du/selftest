@@ -1,13 +1,38 @@
+'''
+Author: 杜泽瑞
+Email: 1076299954@qq.com
+Date: 2026-11-11 12:50:45
+Description: 字典操作示例
+'''
+from copy import deepcopy
+# 不可变对象：int、float、bool、str、tuple
+# 可变对象：list、dict、set
+# 重点坑：元组里面如果放列表，**元组本身不可变，但里面的列表是可变的**
+'''#浅拷贝互相影响的前提：
+#拷贝出来的新容器里，有可变对象list 列表，dict 字典，set 集合。并且你修改这个可变对象内部内容，而不是重新赋值覆盖键！'''
 score = {'张三': 100, '李四': 89, '王武': 333}
-# score['小明'] = 9999
-print(score)
+score1 = score.copy()  
+score1['张三'] = 99  
+score1.update({'小明': 100, '小红': 99}) # 新增的键 不会影响原来的字典
+score2 = deepcopy(score)  # 深度复制只修改副本的值,永远互不干扰
+score2.update({'cccc': 100, 'fffff': 99})
+# score.clear()
+print("score:", score)
+print("score1:", score1)
+print("score2:", score2)
+'''会一起变的正确浅拷贝的例子，'''
+phonebook ={'bbb': [13812345678], 'aaa': [13812345555678], 'ccc': [13812345678]}
+phonebook1 = phonebook.copy()
+phonebook1['bbb'].append(111111111)
+print("phonebook:", phonebook)
+print("phonebook1:", phonebook1)
 # get获取字典元素
 print(score.get("张三"))
 # 判断key是否存在于字典
-print('张三' in score)
+print('判断key是否存在于字典','张三' in score)
 score['李四'] = 22222
 print(score['李四'])
-#   score.clear() 清空字典
+# score.clear() 清空字典
 # 使用keys方法获得key值
 print(score)
 key1 = score.keys()
