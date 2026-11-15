@@ -44,13 +44,12 @@ print('用values的方法获得value值',value1)
 print(list(value1))
 # 使用items的方法获得key和value值
 score1 = score.items()
-print(score1)
+print('使用items的方法获得key和value值',score1)
 print(list(score1))
 '''dict.fromkeys()
 类方法，**用来快速新建字典**，把可迭代对象里的元素全部作为 key，所有 key 绑定同一个 valuePython
 常见可迭代对象：列表、元组、字符串、字典、集合等
 不可迭代对象：int、float、bool、None 等
-
 '''
 keys = ["张三","李四","王五"] # 不给value，默认是None
 d = dict.fromkeys(keys)
@@ -62,7 +61,6 @@ print(d1)
 for k in d:   # 等价于 for k in d.keys()
     print(k)
 # d.values()、d.items() 也都是可迭代对象
-
 a = dict.fromkeys(["b","c"], [])
 print(a)
 # {'a': [], 'b': []}
