@@ -27,23 +27,49 @@ phonebook1['bbb'].append(111111111)
 print("phonebook:", phonebook)
 print("phonebook1:", phonebook1)
 # get获取字典元素
-print(score.get("张三"))
+print("get获取字典元素",score.get("张三"))
 # 判断key是否存在于字典
 print('判断key是否存在于字典','张三' in score)
 score['李四'] = 22222
 print(score['李四'])
 # score.clear() 清空字典
 # 使用keys方法获得key值
-print(score)
 key1 = score.keys()
-print(key1)
+print('使用keys方法获得key值',key1)
 # 以列表形式输出
-print(list(key1))
+print('以列表形式输出',list(key1))
 # 用values的方法获得value值
 value1 = score.values()
-print(value1)
+print('用values的方法获得value值',value1)
 print(list(value1))
 # 使用items的方法获得key和value值
 score1 = score.items()
 print(score1)
 print(list(score1))
+'''dict.fromkeys()
+类方法，**用来快速新建字典**，把可迭代对象里的元素全部作为 key，所有 key 绑定同一个 valuePython
+常见可迭代对象：列表、元组、字符串、字典、集合等
+不可迭代对象：int、float、bool、None 等
+
+'''
+keys = ["张三","李四","王五"] # 不给value，默认是None
+d = dict.fromkeys(keys)
+# {'张三': None, '李四': None, '王五': None}
+print(d)
+d1 = dict.fromkeys(keys, 100) # 给value，默认是100
+print(d1)
+# {'张三': 100, '李四': 100, '王五': 100}
+for k in d:   # 等价于 for k in d.keys()
+    print(k)
+# d.values()、d.items() 也都是可迭代对象
+
+a = dict.fromkeys(["b","c"], [])
+print(a)
+# {'a': [], 'b': []}
+a["b"].append(99)
+print(a)
+# {'b': [99], 'c': [99]} ！！c也被改了
+
+
+
+
