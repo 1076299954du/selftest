@@ -11,3 +11,9 @@ print(f"e的值是：{e}")
 phonebook ={'bbb': '13812345678', 'aaa': '13812345555678', 'ccc': '13812345678'}
 print(phonebook)
 print('dddddde 的电话是{aaa}'.format_map(phonebook))
+name = 'aaa'
+salutation = 'bbb'
+greeting = 'dddd'
+print(name, salutation, greeting)
+print(name,',', salutation, greeting)
+print(name+',', salutation, greeting)
