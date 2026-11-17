@@ -1,3 +1,9 @@
+'''
+Author: 杜泽瑞
+Email: 1076299954@qq.com
+Date: 2026-11-16 12:17:14
+Description: 
+'''
 s = {333, 444, 33, 4455, 66654}
 s1 = {333, 444, 545}
 # 交集操作
@@ -21,5 +27,5 @@ print(s)
 s2 = {i*8 for i in range(1, 10)}
 # 列表生成式 有序
 s3 = [i*8 for i in range(1, 10)]
-print(s2)
+print('将集合转换成列表并排序',sorted(list(s2)))
 print(s3)
