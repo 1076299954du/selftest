@@ -2,6 +2,8 @@ soundrel = {'name': 'Robin', 'girlfrend': 'Marion'}
 key, value = soundrel.popitem()
 print(key)
 print(value)
+'''变量解包赋值
+'''
 a, *b, c = "abc"  # 带*号的变量一定是个列表
 print(a, b, c)
 x = y = [1, 2, 3]
