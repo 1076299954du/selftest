@@ -14,10 +14,13 @@ Description: 动物体系（封装 + 继承 + 多态全部包含）
 '''
 # 父类：Animal（动物）
 class Animal:
-    def __init__(self, name):
+    def __init__(self, name, age):
         # 实例属性：封装，每个动物自己的名字
         self.name = name
-
+        self.__age = age
+    # 对外提供读取私有数据的方法
+    def get_age(self):
+        return self.__age
     # 父类预留方法，约定接口（用来实现多态）
     def speak(self):
         pass
@@ -31,7 +34,7 @@ class Animal:
 class Dog(Animal):
     def speak(self):
         # 重写speak方法
-        print(f"{self.name}：汪汪汪！")
+        print(f"{self.name}：汪汪汪！今年{self.get_age()}岁")
 
 
 # 子类 Cat，继承 Animal
@@ -45,6 +48,11 @@ class Duck(Animal):
     def speak(self):
         print(f"{self.name}：嘎嘎嘎！")
 
+# 子类 Duck，继承 Animal
+class Bird(Animal):
+    def speak(self):
+        print(f"{self.name}：叽叽叽！")
+
 
 # ✅ 多态核心函数：只要求传入的对象有 speak()
 def let_animal_speak(animal: Animal):
@@ -53,13 +61,17 @@ def let_animal_speak(animal: Animal):
 
 # ========== 测试代码 ==========
 dog = Dog("旺财")
+dog1 = Dog("小黑",3)
 cat = Cat("咪咪")
 duck = Duck("小黄")
+bird = Bird("小鸟")
 
 # 调用统一的函数，写法一模一样，行为不一样（多态）
 let_animal_speak(dog)
+let_animal_speak(dog1)
 let_animal_speak(cat)
 let_animal_speak(duck)
+let_animal_speak(bird)
 
 # 继承来的eat方法
 dog.eat()
