@@ -1,20 +1,32 @@
+'''
+Author: 杜泽瑞
+Email: 1076299954@qq.com
+Date: 2026-11-16 12:17:14
+Description: 类的学习
+'''
+
+'''class 关键字：声明这是一个类
+类名：每个单词首字母大写，驼峰命名法'''
 class Student:
-    native_pace = '吉林'  # 直接写在类里的变量，称为类属性
+    native_pace = '吉林'  # 写在_init_外面，属于这个类，所有对象共享。称为类属性。
 
     def __init__(self, name, age):
-        self.name = name  # 实体属性，进行一个赋值操作，将局部变量的name的值赋给实体属性
+        self.name = name  # 实体属性，写在_init_里面，进行一个赋值操作，将局部变量的name的值赋给实体属性，每个对象自己独有。
         self.age = age
-
-    # 实例方法
+    '''
+    - 需要操作对象数据 → 实例方法 (self)
+    - 需要操作类的共享数据 → 类方法 (cls)
+    - 和类、对象数据没关系，只是工具函数 → 静态方法'''
+    # 实例方法：第一个参数必须是self，self代表这个类的对象本身，可以读取修改实例属性
     def eat(self):
         print('学生在吃饭')
 
-    # 静态方法
+    # 静态方法：装饰器@staticmethod，静态方法不需要传入self参数，也不需要传入cls参数，静态方法和类和对象没有关系。
     @staticmethod
     def method():
         print('我是静态方法，因为我使用了 staticmethod 进行修饰')
 
-    # 类方法
+    # 类方法:装饰器@classmethod，类方法的第一个参数必须是cls，cls代表这个类本身，可以访问类属性，不能访问实例属性。
     @classmethod
     def cm(cls):
         print('我是类方法，因为我使用了 classmethod 进行修饰')
@@ -51,3 +63,19 @@ Student.cm()
 Student.method()
 stu1.cm()
 stu1.method()
+
+
+class Dog:
+    def __init__(self, name,age):
+        self.name = name
+        self.age = age
+
+    def eat(self):
+        print('%s爱吃骨头' % self.name)
+# 创建对象，传参数给__init__方法
+dog1 = Dog('大黄', 3)
+dog2 = Dog('二黄', 4)
+# 读取对象属性
+print(dog1.name)
+# 调用方法
+dog1.eat()
