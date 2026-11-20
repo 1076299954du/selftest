@@ -46,9 +46,9 @@ print('======，打印student对象，pyton默认输出内容',stu1)
 # print(id(Student))
 # print(type(Student))
 # print(Student)
-stu1.eat()  # 对象名.方法名（）
+stu1.eat()  # 对象名.方法名（）调用实例方法
 print(stu1.age, stu1.name)
-Student.eat(stu1)  # 类名.方法名（类的对象）实际就是方法定义处的self
+Student.eat(stu1)  # 类名.方法名（类的对象）实际就是方法定义处的self。调用类方法/静态方法。
 
 #  类属性的使用方式
 print(Student.native_pace)
