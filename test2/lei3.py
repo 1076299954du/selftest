@@ -2,8 +2,8 @@
 # @Author: duzerui
 # @Date: 2026-11-20 14:24:45
 # @LastEditors: duzerui
-# @LastEditTime: 2026-11-20 15:02:47
-# @FilePath: \selftest\test1\lei3.py
+# @LastEditTime: 2026-11-20 18:17:32
+# @FilePath: \selftest\test2\lei3.py
 # @Description: 文件功能描述
 #
 '''
@@ -14,13 +14,13 @@ Description: 动物体系（封装 + 继承 + 多态全部包含）
 '''
 # 父类：Animal（动物）
 class Animal:
-    def __init__(self, name, age):
+    def __init__(self, name, age=1):
         # 实例属性：封装，每个动物自己的名字
         self.name = name
-        self.__age = age
+        self.age = age
     # 对外提供读取私有数据的方法
     def get_age(self):
-        return self.__age
+        return self.age
     # 父类预留方法，约定接口（用来实现多态）
     def speak(self):
         pass
@@ -28,6 +28,9 @@ class Animal:
     # 公共方法：所有动物都要吃东西，复用（继承）
     def eat(self):
         print(f"{self.name} 在吃东西")
+
+    def __str__(self):
+        return f"Animal(name={self.name}, age={self.__age})"
 
 
 # 子类 Dog，继承 Animal
@@ -57,18 +60,17 @@ class Bird(Animal):
 # ✅ 多态核心函数：只要求传入的对象有 speak()
 def let_animal_speak(animal: Animal):
     animal.speak()
+    animal.get_age()
 
 
 # ========== 测试代码 ==========
-dog = Dog("旺财")
-dog1 = Dog("小黑",3)
-cat = Cat("咪咪")
-duck = Duck("小黄")
-bird = Bird("小鸟")
+dog = Dog("旺财", 3)
+cat = Cat("咪咪", 2)
+duck = Duck("小黄", 1)
+bird = Bird("小鸟", 1   )
 
 # 调用统一的函数，写法一模一样，行为不一样（多态）
 let_animal_speak(dog)
-let_animal_speak(dog1)
 let_animal_speak(cat)
 let_animal_speak(duck)
 let_animal_speak(bird)
