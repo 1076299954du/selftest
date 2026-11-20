@@ -32,21 +32,17 @@ class Student:
         print('我是类方法，因为我使用了 classmethod 进行修饰')
 
 
-def method():
-    print('我使用了staticmethod进行修饰，所以我是静态方法')
-
-
-# 在类之外定义的称为函数，在类之外定义的称为方法
+# 在类之外定义的称为函数，在类里面定义的称为方法
 def drink():
     print('喝水')
 
 
+drink()  # 函数的调用
 # 创建Student类的值
 stu1 = Student('张三', 34)
-print(id(stu1))
-print(type(stu1))
-print(stu1)
-# print('----------')
+print('stu1的ID',id(stu1))
+print('stu1的类型：',type(stu1))
+print('======，打印student对象，pyton默认输出内容',stu1)
 # print(id(Student))
 # print(type(Student))
 # print(Student)
@@ -58,6 +54,7 @@ Student.eat(stu1)  # 类名.方法名（类的对象）实际就是方法定义�
 print(Student.native_pace)
 Student.native_pace = '天津'
 print(stu1.native_pace)
+
 print('静态方法与类方法的使用')
 Student.cm()
 Student.method()
