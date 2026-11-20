@@ -21,3 +21,4 @@ def binary_search(arr, target):
 my_list = [1, 3, 5, 7, 9, 67, 88]
 print(binary_search(my_list, 88))
 print(binary_search(my_list, 99))
+print(max(my_list))

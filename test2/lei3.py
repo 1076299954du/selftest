@@ -1,8 +1,16 @@
+#
+# @Author: duzerui
+# @Date: 2026-11-20 14:24:45
+# @LastEditors: duzerui
+# @LastEditTime: 2026-11-20 15:02:47
+# @FilePath: \selftest\test1\lei3.py
+# @Description: 文件功能描述
+#
 '''
 Author: 杜泽瑞
 Email: 1076299954@qq.com
 Date: 2026-11-20 13:21:50
-Description: 动物体系（封装 + 继承 + 多态全部包含
+Description: 动物体系（封装 + 继承 + 多态全部包含）
 '''
 # 父类：Animal（动物）
 class Animal:
