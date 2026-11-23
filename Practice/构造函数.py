@@ -1,10 +1,17 @@
-# class FooBar:
-#     def __init__(self, value=42):
-#         self.somevar = value
 #
-#
-# f = FooBar("This is a constructor argument")
-# print(f.somevar)
+# @Author: duzerui
+# @Date: 2026-11-16 11:22:52
+# @LastEditors: duzerui
+# @LastEditTime: 2026-11-23 17:18:17
+# @Description: 构造方法
+
+class FooBar:
+    def __init__(self, value=42):
+        self.somevar = value
+
+
+f = FooBar("This is a constructor argument")
+print(f.somevar)
 
 
 class Bird:
@@ -28,9 +35,9 @@ class SongBird(Bird):
         print(self.sound)
 
 
-# b = Bird()
-# b.eat()
-# b.eat()
+b = Bird()
+b.eat()
+
 
 sb = SongBird()
 print(sb.sing())

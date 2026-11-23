@@ -1,3 +1,9 @@
+#
+# @Author: duzerui
+# @Date: 2026-11-16 11:22:52
+# @LastEditors: duzerui
+# @LastEditTime: 2026-11-23 17:05:59
+# @Description: 文件功能描述
 class Persion:
     def __new__(cls, *args, **kwargs):  # 用于创建对象
         print('__new__被调用，cls的ID值为{0}'.format(id(cls)))
@@ -16,3 +22,15 @@ print('Persion这个类对象的id为{0}'.format(id(Persion)))
 # 创建Persion类的实例对象
 p1 = Persion('zhangsan', 55)
 print('p1这个Persion类实例对象的ID：{0}'.format(id(p1)))
+
+class Bird():
+    def __init__(self):
+        self.hungry = True
+    def eat(self):
+        if self.hungry:
+            print('Aaaah...')
+            self.hungry = False
+        else:
+            print('No, thanks!')
+
+
