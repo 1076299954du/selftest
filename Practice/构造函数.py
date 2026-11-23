@@ -2,8 +2,8 @@
 # @Author: duzerui
 # @Date: 2026-11-16 11:22:52
 # @LastEditors: duzerui
-# @LastEditTime: 2026-11-23 17:18:17
-# @Description: 构造方法
+# @LastEditTime: 2026-11-23 17:36:05
+# @Description: 构造方法  使用super函数。调用父类的构造函数
 
 class FooBar:
     def __init__(self, value=42):
@@ -35,14 +35,14 @@ class SongBird(Bird):
         print(self.sound)
 
 
-b = Bird()
-b.eat()
+# b = Bird()
+# b.eat()
 
 
 sb = SongBird()
-print(sb.sing())
-print(sb.eat())
-print(sb.eat())
+sb.sing()
+sb.eat()
+# print(sb.eat())
 
 
 
