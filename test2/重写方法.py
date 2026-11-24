@@ -1,3 +1,11 @@
+#
+# @Author: 杜泽瑞
+# @Email: 1076299954@qq.com
+# @Date: 2026-11-16 11:22:52
+# @LastEditors: duzerui
+# @LastEditTime: 2026-11-24 17:38:51
+# @Description: 文件功能描述
+#
 class Student:
     def __init__(self, name, age):
         self.name = name
