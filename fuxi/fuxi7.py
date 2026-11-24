@@ -1,10 +1,9 @@
-#
-# @Author: duzerui
-# @Date: 2026-11-16 11:22:52
-# @LastEditors: duzerui
-# @LastEditTime: 2026-11-18 16:37:38
-# @FilePath: \selftest\fuxi\fuxi7.py
-'''@Description: - `*args`：收集位置参数，打包成元组 tuple 。`**kwargs`：收集关键字参数，打包成字典 dict。*（单独）分隔符，
+'''
+Author: duzerui
+Date: 2026-11-16 11:22:52
+LastEditors: duzerui
+LastEditTime: 2026-11-24 18:01:03
+@Description: - `*args`：收集位置参数，打包成元组 tuple 。`**kwargs`：收集关键字参数，打包成字典 dict。*（单独）分隔符，
 不接受参数。后面的参数必须key=值'''
 
 def in_the_middle(title, **params):  # 使用两个星号收集关键字参数，得到一个字典

@@ -1,9 +1,11 @@
-#
-# @Author: duzerui
-# @Date: 2026-11-16 11:22:52
-# @LastEditors: duzerui
-# @LastEditTime: 2026-11-23 17:05:59
-# @Description: 文件功能描述
+'''
+Author: duzerui
+Date: 2026-11-16 11:22:52
+LastEditors: duzerui
+LastEditTime: 2026-11-24 18:00:23
+Description: 文件功能描述
+'''
+
 class Persion:
     def __new__(cls, *args, **kwargs):  # 用于创建对象
         print('__new__被调用，cls的ID值为{0}'.format(id(cls)))
@@ -32,5 +34,7 @@ class Bird():
             self.hungry = False
         else:
             print('No, thanks!')
+
+
 
 

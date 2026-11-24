@@ -1,10 +1,11 @@
-#
-# @Author: duzerui
-# @Date: 2026-11-16 11:22:52
-# @LastEditors: duzerui
-# @LastEditTime: 2026-11-23 17:00:31
-# @Description: 文件功能描述
-#
+'''
+Author: duzerui
+Date: 2026-11-16 11:22:52
+LastEditors: duzerui
+LastEditTime: 2026-11-24 18:00:00
+Description: 文件功能描述
+'''
+
 class Student:
     def __init__(self, name):
         self.name = name
@@ -26,4 +27,4 @@ class FooBar:
     def __init__(self, value=42):
         self .somevar = value
 f = FooBar('This is a constructor argument')
-print(f.somevar)  # This is a constructor argument
+print(f.somevar)  # This is a constructor argumen
