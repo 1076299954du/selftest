@@ -1,3 +1,11 @@
+'''
+Author: duzerui
+Date: 2026-11-16 11:22:52
+LastEditors: duzerui
+LastEditTime: 2026-11-26 14:30:34
+Description: 字符串的使用
+'''
+
 a = ['h', 'a', 'p', 'p', 'y']
 a.sort()
 a.reverse()
