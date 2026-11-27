@@ -1,3 +1,10 @@
+'''
+Author: duzerui
+Date: 2026-11-27 16:02:59
+LastEditors: duzerui
+LastEditTime: 2026-11-27 17:01:21
+Description: os 模块
+'''
 
 import os
 
@@ -18,5 +25,6 @@ if __name__ == '__main__':
     print("当前目录内容：", os.listdir("."))
 
     # 判断是否是文件
+    
     print("是否是文件：", os.path.isfile(target_path))
 
