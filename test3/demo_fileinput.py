@@ -2,7 +2,7 @@
 Author: duzerui
 Date: 2026-11-27 16:52:00
 LastEditors: duzerui
-LastEditTime: 2026-11-27 17:49:32
+LastEditTime: 2026-11-27 18:51:36
 Description: fileinput 模块
 函数 / 方法	作用
 fileinput.input(files=None, inplace=False, backup='')	核心入口，返回可逐行迭代的对象
@@ -19,9 +19,11 @@ import os
 from pathlib import Path
 
 print(os.getcwd())
+print(os.listdir()) # 查看当前目录有哪些文件
 # a.txt / b.txt 与脚本同目录；用脚本所在目录拼绝对路径，
 # 这样无论从哪个工作目录启动，都能正确找到文件。
 BASE_DIR = Path(__file__).resolve().parent
+print(BASE_DIR)
 FILES = [BASE_DIR / 'a.txt', BASE_DIR / 'b.txt']
 
 # 同时处理 a.txt 和 b.txt；文件内容为 UTF-8，必须显式指定 encoding

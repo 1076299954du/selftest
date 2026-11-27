@@ -2,7 +2,7 @@
 Author: duzerui
 Date: 2026-11-27 16:02:59
 LastEditors: duzerui
-LastEditTime: 2026-11-27 17:08:22
+LastEditTime: 2026-11-27 18:48:25
 Description: os 模块
 '''
 
@@ -10,7 +10,7 @@ import os
 
 if __name__ == '__main__':
     # 当前工作目录
-    print("当前目录：", os.getcwd())
+    print("当前目录：", os.getcwd()) # 启动目录，不是脚本目录
 
     # 拼接路径
     target_path = os.path.join("test_dir", "hello.txt") # 作用：安全拼接文件路径，自动适配不同系统的路径分隔符
