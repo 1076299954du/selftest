@@ -3,7 +3,7 @@ Author: duzerui
 Date: 2026-11-27 15:35:15
 LastEditors: duzerui
 LastEditTime: 2026-11-27 15:35:24
-Description: 文件功能描述
+Description:  demo_sys.py
 '''
 # demo_sys.py
 import sys
