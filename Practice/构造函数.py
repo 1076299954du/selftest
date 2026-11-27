@@ -4,12 +4,7 @@ Email: 1076299954@qq.com
 Date: 2026-11-24 12:47:02
 Description:构造方法  使用super函数。调用父类的构造函数
 '''
-#
-# @Author: duzerui
-# @Date: 2026-11-16 11:22:52
-# LastEditors: Please set LastEditors
-# LastEditTime: 2026-11-24 13:23:42
-# @Description: 构造方法  使用super函数。调用父类的构造函数
+
 
 class FooBar:
     def __init__(self, value=42):
